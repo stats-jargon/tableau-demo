@@ -440,7 +440,7 @@
         <calculation class='tableau' formula='// to calculate the number of inactive days we need to know the number of days of data for each user&#13;&#10;// then subtract the number of active days of data&#13;&#10;// if there are no activty date entries then the number of days in the data set can be taken&#13;&#10;// the if statement fisrt checks for this null condition&#13;&#10;// else, allows for the calculation to go ahead&#13;&#10;&#13;&#10;IF ISNULL([Calculation_891431291648167936] - [Calculation_1067071650202550272])&#13;&#10;THEN SUM({[Calculation_891431291648167936]})&#13;&#10;ELSE (ZN([Calculation_891431291648167936]) - ZN([Calculation_1067071650202550272]))&#13;&#10;END' />
         <desc>
           <formatted-text>
-            <run>Calculates the number of days in the data that a user was innactive. Right click and select edit for more info</run>
+            <run>Calculates the number of days in the data that a user was innactive. Right click and select edit for more info or not up to you</run>
           </formatted-text>
         </desc>
       </column>
@@ -2840,3 +2840,4 @@
     </window>
   </windows>
 </workbook>
+
