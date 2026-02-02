@@ -16,7 +16,7 @@
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location derived-from='https://us-east-1.online.tableau.com/t/nate-ba49a57805/workbooks/ProductUtilization?rev=1.0' id='ProductUtilization' path='/t/nate-ba49a57805/workbooks' revision='1.2' site='nate-ba49a57805' />
+  <repository-location derived-from='http://localhost:9100/t/nate-ba49a57805/workbooks/ProductUtilization?rev=1.6' id='ProductUtilization' path='/t/nate-ba49a57805/workbooks' revision='1.7' site='nate-ba49a57805' />
   <preferences>
     <preference name='connection.receive.timeout' value='8' />
     <preference name='connection.send.timeout' value='8' />
@@ -440,7 +440,7 @@
         <calculation class='tableau' formula='// to calculate the number of inactive days we need to know the number of days of data for each user&#13;&#10;// then subtract the number of active days of data&#13;&#10;// if there are no activty date entries then the number of days in the data set can be taken&#13;&#10;// the if statement fisrt checks for this null condition&#13;&#10;// else, allows for the calculation to go ahead&#13;&#10;&#13;&#10;IF ISNULL([Calculation_891431291648167936] - [Calculation_1067071650202550272])&#13;&#10;THEN SUM({[Calculation_891431291648167936]})&#13;&#10;ELSE (ZN([Calculation_891431291648167936]) - ZN([Calculation_1067071650202550272]))&#13;&#10;END' />
         <desc>
           <formatted-text>
-            <run>Calculates the number of days in the data that a user was innactive. Right click and select edit for more info or not up to you</run>
+            <run>Calculates the number of days in the data that a user was innactive. Right click and select edit for more info</run>
           </formatted-text>
         </desc>
       </column>
@@ -1641,7 +1641,7 @@
               <formatted-text>
                 <run fontcolor='#0077b5' fontname='Tableau Medium' fontsize='18'><![CDATA[<[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[ctd:Calculation_1422011593679265795:qk]>]]></run>
                 <run>Æ&#10;</run>
-                <run fontcolor='#0077b5' fontsize='18'>Had Activity</run>
+                <run fontcolor='#0077b5' fontsize='18'>Had Activities in SET TIME lol</run>
                 <run>Æ&#10;</run>
               </formatted-text>
             </customized-label>
@@ -1987,7 +1987,7 @@
   </worksheets>
   <dashboards>
     <dashboard name='Product Utilization'>
-      <repository-location derived-from='https://us-east-1.online.tableau.com/t/nate-ba49a57805/workbooks/ProductUtilization/ProductUtilization?rev=' id='ProductUtilization' path='/t/nate-ba49a57805/workbooks/ProductUtilization' revision='' site='nate-ba49a57805' />
+      <repository-location derived-from='http://localhost:9100/t/nate-ba49a57805/workbooks/ProductUtilization/ProductUtilization?rev=' id='ProductUtilization' path='/t/nate-ba49a57805/workbooks/ProductUtilization' revision='' site='nate-ba49a57805' />
       <style>
         <style-rule element='dash-text'>
           <format attr='text-orientation' id='dash-text_25' value='-90' />
@@ -2580,12 +2580,74 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='9' />
       <device-preview>
         <device name='Generic Desktop Monitor' type='Desktop' />
         <device is-portrait='true' name='iPhone 5' type='Phone' />
       </device-preview>
       <simple-id uuid='{ECA3B393-92F7-461F-969A-B67623A1D637}' />
+    </window>
+    <window class='worksheet' name='Number of Active' tab-color='#72bcbb'>
+      <cards>
+        <edge name='left'>
+          <strip size='256'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[ctd:Calculation_1422011593679265795:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>205</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:Calculation_1230327132095434752:nk]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:Calculation_747034597455601674:nk]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:activityType:nk]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:contractId:ok]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:createdAt (Activities):qk]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:recordedAt:qk]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:seatId:ok]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1230327132099817475:nk:5]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1230327132099817475:nk:6]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1230327132099817475:nk]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[yr:createdAt (Activity_Generated.csv):ok]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[yr:createdAt:ok]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[yr:recordedAt:ok]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{463C219C-DF85-4169-BF22-9BA5738A98D8}' />
     </window>
     <window class='worksheet' hidden='true' name='Active users timeline' tab-color='#72bcbb'>
       <cards>
@@ -2705,50 +2767,6 @@
       </viewpoint>
       <simple-id uuid='{8FFEBBCA-BC75-4E92-86EE-8E1D0378D66E}' />
     </window>
-    <window class='worksheet' hidden='true' name='Number of Active' tab-color='#72bcbb'>
-      <cards>
-        <edge name='left'>
-          <strip size='256'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='title' />
-          </strip>
-        </edge>
-      </cards>
-      <viewpoint>
-        <zoom type='entire-view' />
-        <highlight>
-          <color-one-way>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:Calculation_1230327132095434752:nk]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:Calculation_747034597455601674:nk]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:activityType:nk]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:contractId:ok]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:createdAt (Activities):qk]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:recordedAt:qk]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:seatId:ok]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1230327132099817475:nk:5]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1230327132099817475:nk:6]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1230327132099817475:nk]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[yr:createdAt (Activity_Generated.csv):ok]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[yr:createdAt:ok]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[yr:recordedAt:ok]</field>
-          </color-one-way>
-        </highlight>
-        <default-map-tool-selection tool='2' />
-      </viewpoint>
-      <simple-id uuid='{463C219C-DF85-4169-BF22-9BA5738A98D8}' />
-    </window>
     <window class='worksheet' hidden='true' name='Number of Provisioned' tab-color='#72bcbb'>
       <cards>
         <edge name='left'>
@@ -2840,4 +2858,3 @@
     </window>
   </windows>
 </workbook>
-
