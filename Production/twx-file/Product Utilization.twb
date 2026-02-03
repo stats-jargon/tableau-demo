@@ -16,7 +16,7 @@
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location derived-from='http://localhost:9100/t/nate-ba49a57805/workbooks/ProductUtilization?rev=1.6' id='ProductUtilization' path='/t/nate-ba49a57805/workbooks' revision='1.7' site='nate-ba49a57805' />
+  <repository-location derived-from='http://localhost:9100/t/nate-ba49a57805/workbooks/ProductUtilization?rev=1.7' id='ProductUtilization' path='/t/nate-ba49a57805/workbooks' revision='1.8' site='nate-ba49a57805' />
   <preferences>
     <preference name='connection.receive.timeout' value='8' />
     <preference name='connection.send.timeout' value='8' />
@@ -1737,7 +1737,7 @@
               <formatted-text>
                 <run fontcolor='#86888a' fontname='Tableau Semibold' fontsize='18'><![CDATA[<[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1422011593684369412:qk]>]]></run>
                 <run>Æ&#10;</run>
-                <run fontcolor='#86888a' fontsize='18'>No Activity</run>
+                <run fontcolor='#86888a' fontsize='18'>No Activites</run>
               </formatted-text>
             </customized-label>
             <style>
@@ -2561,7 +2561,7 @@
     </dashboard>
   </dashboards>
   <windows source-height='30'>
-    <window class='dashboard' maximized='true' name='Product Utilization' tab-color='#17927d'>
+    <window class='dashboard' name='Product Utilization' tab-color='#17927d'>
       <viewpoints>
         <viewpoint name='Active users timeline'>
           <zoom type='entire-view' />
@@ -2575,17 +2575,77 @@
         </viewpoint>
         <viewpoint name='Number of Provisioned'>
           <zoom type='entire-view' />
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields />
+                    <y-fields />
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1422011593684369412:qk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>10</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
         </viewpoint>
         <viewpoint name='Percent of Seats Active'>
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='9' />
+      <active id='16' />
       <device-preview>
         <device name='Generic Desktop Monitor' type='Desktop' />
         <device is-portrait='true' name='iPhone 5' type='Phone' />
       </device-preview>
       <simple-id uuid='{ECA3B393-92F7-461F-969A-B67623A1D637}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Number of Provisioned' tab-color='#72bcbb'>
+      <cards>
+        <edge name='left'>
+          <strip size='255'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:Calculation_1230327132095434752:nk]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:Calculation_747034597455601674:nk]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:activityType:nk]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:recordedAt:qk]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:seatId:ok]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1230327132099817475:nk:5]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1230327132099817475:nk:6]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1230327132099817475:nk]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[yr:createdAt (Activity_Generated.csv):ok]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[yr:createdAt:ok]</field>
+            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[yr:recordedAt:ok]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{E69C75D3-A02A-4578-9278-9F39A760E47A}' />
     </window>
     <window class='worksheet' name='Number of Active' tab-color='#72bcbb'>
       <cards>
@@ -2766,48 +2826,6 @@
         </highlight>
       </viewpoint>
       <simple-id uuid='{8FFEBBCA-BC75-4E92-86EE-8E1D0378D66E}' />
-    </window>
-    <window class='worksheet' hidden='true' name='Number of Provisioned' tab-color='#72bcbb'>
-      <cards>
-        <edge name='left'>
-          <strip size='255'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='title' />
-          </strip>
-        </edge>
-      </cards>
-      <viewpoint>
-        <zoom type='entire-view' />
-        <highlight>
-          <color-one-way>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:Calculation_1230327132095434752:nk]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:Calculation_747034597455601674:nk]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:activityType:nk]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:recordedAt:qk]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[none:seatId:ok]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1230327132099817475:nk:5]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1230327132099817475:nk:6]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[usr:Calculation_1230327132099817475:nk]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[yr:createdAt (Activity_Generated.csv):ok]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[yr:createdAt:ok]</field>
-            <field>[federated.1t4hz1n1ti62mq1cun1uy0fs6nhi].[yr:recordedAt:ok]</field>
-          </color-one-way>
-        </highlight>
-        <default-map-tool-selection tool='2' />
-      </viewpoint>
-      <simple-id uuid='{E69C75D3-A02A-4578-9278-9F39A760E47A}' />
     </window>
     <window class='worksheet' hidden='true' name='Percent of Seats Active' tab-color='#72bcbb'>
       <cards>
