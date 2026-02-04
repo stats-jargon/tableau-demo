@@ -314,7 +314,7 @@
           <alias key='&quot;Total Sales:&quot;' value='Total' />
         </aliases>
       </column>
-      <column caption='Sales Commission' datatype='table' name='[__tableau_internal_object_id__].[Sales Commission.csv_4F66D485F1F148A299B285539B88B015]' role='measure' type='quantitative' />
+      <column caption='Sales Commission for example' datatype='table' name='[__tableau_internal_object_id__].[Sales Commission.csv_4F66D485F1F148A299B285539B88B015]' role='measure' type='quantitative' />
       <column-instance column='[Base (Variable)]' derivation='Min' name='[min:Base (Variable):qk]' pivot='key' type='quantitative' />
       <column-instance column='[Commission (Variable)]' derivation='Sum' name='[sum:Commission (Variable):qk]' pivot='key' type='quantitative' />
       <column-instance column='[Achievement (variable) (copy)]' derivation='User' name='[usr:Achievement (variable) (copy):nk]' pivot='key' type='nominal' />
@@ -7288,3 +7288,4 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
     </explanation-types>
   </explain-data>
 </workbook>
+
