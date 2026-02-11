@@ -21,7 +21,7 @@
     <WorksheetBackgroundTransparency />
     <ZoneFriendlyName />
   </document-format-change-manifest>
-  <repository-location derived-from='http://localhost:9100/t/nate-ba49a57805/workbooks/Superstore_17705599894140?rev=1.2' id='Superstore_17705599894140' path='/t/nate-ba49a57805/workbooks' revision='1.3' site='nate-ba49a57805' />
+  <repository-location derived-from='http://localhost:9100/t/nate-ba49a57805/workbooks/Superstore_17705599894140?rev=1.2' id='Superstore_17705599894140' path='/t/nate-ba49a57805/workbooks' revision='1.4' site='nate-ba49a57805' />
   <preferences>
     <preference name='datagrid.autoupdate.max.filesize' value='100000000000' />
     <preference name='ui.discoverpane.stagingWebContentSwitch' value='1' />
@@ -967,7 +967,7 @@
       <column caption='Profit per Order' datatype='real' default-format='C1033%' name='[Sales per Customer (copy)]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='Sum([Profit])/countD([Order ID])' />
       </column>
-      <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+      <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
       <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
       <column datatype='string' name='[Ship Mode]' role='dimension' type='nominal' />
       <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
@@ -1701,7 +1701,7 @@
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column datatype='date' name='[Ship Date]' role='dimension' type='ordinal' />
             <column datatype='string' name='[Ship Mode]' role='dimension' type='nominal' />
@@ -1919,7 +1919,7 @@
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
             <column-instance column='[Customer Name]' derivation='None' name='[none:Customer Name:nk]' pivot='key' type='nominal' />
@@ -2058,7 +2058,7 @@
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
             <column-instance column='[Customer Name]' derivation='None' name='[none:Customer Name:nk]' pivot='key' type='nominal' />
@@ -2384,7 +2384,7 @@
           <datasource-dependencies datasource='federated.10nnk8d1vgmw8q17yu76u06pnbcj'>
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column-instance column='[Sales]' derivation='Sum' forecast-column-base='[sum:Sales:qk]' forecast-column-type='forecast-value' name='[fVal:sum:Sales:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
@@ -2619,7 +2619,7 @@
             <column-instance column='[Sales Target]' derivation='Sum' name='[sum:Sales Target:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.10nnk8d1vgmw8q17yu76u06pnbcj'>
-            <column caption='SUM([Sales v2])-SUM([Sales Target].[Sales Target])' datatype='real' name='[Calculation_5144658905056067585]' role='measure' type='quantitative' user:unnamed='Performance'>
+            <column caption='SUM([Sales v3])-SUM([Sales Target].[Sales Target])' datatype='real' name='[Calculation_5144658905056067585]' role='measure' type='quantitative' user:unnamed='Performance'>
               <calculation class='tableau' formula='SUM([Sales])-SUM([federated.0hgpf0j1fdpvv316shikk0mmdlec].[Sales Target])' />
             </column>
             <column caption='Sales above Target?' datatype='string' name='[Calculation_9951107165644870]' role='measure' type='nominal'>
@@ -2633,7 +2633,7 @@
             <column datatype='string' name='[Category]' role='dimension' type='nominal' />
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column-instance column='[Order Date]' derivation='Month' name='[mn:Order Date:ok]' pivot='key' type='ordinal' />
             <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
@@ -2793,7 +2793,7 @@
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column datatype='date' name='[Ship Date]' role='dimension' type='ordinal' />
             <column datatype='string' name='[Ship Mode]' role='dimension' type='nominal' />
@@ -2987,7 +2987,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column datatype='string' name='[Product Name]' role='dimension' type='nominal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column datatype='string' name='[Sub-Category]' role='dimension' type='nominal' />
             <column-instance column='[Order Date]' derivation='Month' name='[mn:Order Date:ok]' pivot='key' type='ordinal' />
@@ -3162,7 +3162,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column-instance column='[Order Date]' derivation='Month' name='[mn:Order Date:ok]' pivot='key' type='ordinal' />
             <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
             <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
@@ -3456,7 +3456,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column datatype='string' name='[Order ID]' role='dimension' type='nominal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[Calculation_9060122104947471]' derivation='None' name='[none:Calculation_9060122104947471:nk]' pivot='key' type='nominal' />
             <column-instance column='[Country/Region]' derivation='None' name='[none:Country/Region:nk]' pivot='key' type='nominal' />
@@ -3737,7 +3737,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column datatype='string' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[Calculation_9060122104947471]' derivation='None' name='[none:Calculation_9060122104947471:nk]' pivot='key' type='nominal' />
@@ -3894,7 +3894,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column datatype='string' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[Calculation_9060122104947471]' derivation='None' name='[none:Calculation_9060122104947471:nk]' pivot='key' type='nominal' />
@@ -4335,7 +4335,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column datatype='string' name='[Country/Region]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[City]' derivation='None' name='[none:City:nk]' pivot='key' type='nominal' />
             <column-instance column='[Order Date]' derivation='None' name='[none:Order Date:qk]' pivot='key' type='quantitative' />
@@ -4455,7 +4455,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column caption='Profit per Order' datatype='real' default-format='C1033%' name='[Sales per Customer (copy)]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='Sum([Profit])/countD([Order ID])' />
             </column>
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[Discount]' derivation='Avg' name='[avg:Discount:qk]' pivot='key' type='quantitative' />
@@ -4622,13 +4622,13 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column caption='Sales Forecast' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Calculation_5421109230915137]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='[Sales]*(1-[Parameters].[Parameter 2])*(1+[Parameters].[Parameter 1])' />
             </column>
-            <column caption='SUM([Sales v2])-SUM([Sales Forecast])' datatype='real' name='[Calculation_9330126204734562]' role='measure' type='quantitative' user:unnamed='WhatIfForecast'>
+            <column caption='SUM([Sales v3])-SUM([Sales Forecast])' datatype='real' name='[Calculation_9330126204734562]' role='measure' type='quantitative' user:unnamed='WhatIfForecast'>
               <calculation class='tableau' formula='SUM([Sales])-SUM([Calculation_5421109230915137])' />
             </column>
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v2' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column-instance column='[Order Date]' derivation='Month' name='[mn:Order Date:ok]' pivot='key' type='ordinal' />
             <column-instance column='[Order Date]' derivation='None' name='[none:Order Date:qk]' pivot='key' type='quantitative' />
@@ -5560,8 +5560,8 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
           </layout-options>
           <size maxheight='750' minheight='750' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='61' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='60' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='63' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97334' id='62' param='vert' type-v2='layout-flow' w='98000' x='1000' y='1333'>
                 <zone h='3982' id='17' type-v2='title' w='99180' x='410' y='774'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
