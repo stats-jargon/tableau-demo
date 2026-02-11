@@ -21,7 +21,7 @@
     <WorksheetBackgroundTransparency />
     <ZoneFriendlyName />
   </document-format-change-manifest>
-  <repository-location derived-from='http://localhost:9100/t/nate-ba49a57805/workbooks/Superstore_17705599894140?rev=1.2' id='Superstore_17705599894140' path='/t/nate-ba49a57805/workbooks' revision='1.4' site='nate-ba49a57805' />
+  <repository-location derived-from='http://localhost:9100/t/nate-ba49a57805/workbooks/Superstore_17705599894140?rev=1.1' id='Superstore_17705599894140' path='/t/nate-ba49a57805/workbooks' revision='1.5' site='nate-ba49a57805' />
   <preferences>
     <preference name='datagrid.autoupdate.max.filesize' value='100000000000' />
     <preference name='ui.discoverpane.stagingWebContentSwitch' value='1' />
@@ -967,7 +967,7 @@
       <column caption='Profit per Order' datatype='real' default-format='C1033%' name='[Sales per Customer (copy)]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='Sum([Profit])/countD([Order ID])' />
       </column>
-      <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+      <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
       <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
       <column datatype='string' name='[Ship Mode]' role='dimension' type='nominal' />
       <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
@@ -1701,7 +1701,7 @@
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column datatype='date' name='[Ship Date]' role='dimension' type='ordinal' />
             <column datatype='string' name='[Ship Mode]' role='dimension' type='nominal' />
@@ -1919,7 +1919,7 @@
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
             <column-instance column='[Customer Name]' derivation='None' name='[none:Customer Name:nk]' pivot='key' type='nominal' />
@@ -2058,7 +2058,7 @@
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
             <column-instance column='[Customer Name]' derivation='None' name='[none:Customer Name:nk]' pivot='key' type='nominal' />
@@ -2384,7 +2384,7 @@
           <datasource-dependencies datasource='federated.10nnk8d1vgmw8q17yu76u06pnbcj'>
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column-instance column='[Sales]' derivation='Sum' forecast-column-base='[sum:Sales:qk]' forecast-column-type='forecast-value' name='[fVal:sum:Sales:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
@@ -2619,7 +2619,7 @@
             <column-instance column='[Sales Target]' derivation='Sum' name='[sum:Sales Target:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.10nnk8d1vgmw8q17yu76u06pnbcj'>
-            <column caption='SUM([Sales v3])-SUM([Sales Target].[Sales Target])' datatype='real' name='[Calculation_5144658905056067585]' role='measure' type='quantitative' user:unnamed='Performance'>
+            <column caption='SUM([Sales])-SUM([Sales Target].[Sales Target])' datatype='real' name='[Calculation_5144658905056067585]' role='measure' type='quantitative' user:unnamed='Performance'>
               <calculation class='tableau' formula='SUM([Sales])-SUM([federated.0hgpf0j1fdpvv316shikk0mmdlec].[Sales Target])' />
             </column>
             <column caption='Sales above Target?' datatype='string' name='[Calculation_9951107165644870]' role='measure' type='nominal'>
@@ -2633,7 +2633,7 @@
             <column datatype='string' name='[Category]' role='dimension' type='nominal' />
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column-instance column='[Order Date]' derivation='Month' name='[mn:Order Date:ok]' pivot='key' type='ordinal' />
             <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
@@ -2793,7 +2793,7 @@
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column datatype='date' name='[Ship Date]' role='dimension' type='ordinal' />
             <column datatype='string' name='[Ship Mode]' role='dimension' type='nominal' />
@@ -2987,7 +2987,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column datatype='string' name='[Product Name]' role='dimension' type='nominal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column datatype='string' name='[Sub-Category]' role='dimension' type='nominal' />
             <column-instance column='[Order Date]' derivation='Month' name='[mn:Order Date:ok]' pivot='key' type='ordinal' />
@@ -3162,7 +3162,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column-instance column='[Order Date]' derivation='Month' name='[mn:Order Date:ok]' pivot='key' type='ordinal' />
             <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
             <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
@@ -3456,7 +3456,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column datatype='string' name='[Order ID]' role='dimension' type='nominal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[Calculation_9060122104947471]' derivation='None' name='[none:Calculation_9060122104947471:nk]' pivot='key' type='nominal' />
             <column-instance column='[Country/Region]' derivation='None' name='[none:Country/Region:nk]' pivot='key' type='nominal' />
@@ -3737,7 +3737,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column datatype='string' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[Calculation_9060122104947471]' derivation='None' name='[none:Calculation_9060122104947471:nk]' pivot='key' type='nominal' />
@@ -3894,7 +3894,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column datatype='string' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[Calculation_9060122104947471]' derivation='None' name='[none:Calculation_9060122104947471:nk]' pivot='key' type='nominal' />
@@ -4335,7 +4335,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column datatype='string' name='[Country/Region]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[City]' derivation='None' name='[none:City:nk]' pivot='key' type='nominal' />
             <column-instance column='[Order Date]' derivation='None' name='[none:Order Date:qk]' pivot='key' type='quantitative' />
@@ -4455,7 +4455,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column caption='Profit per Order' datatype='real' default-format='C1033%' name='[Sales per Customer (copy)]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='Sum([Profit])/countD([Order ID])' />
             </column>
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[Discount]' derivation='Avg' name='[avg:Discount:qk]' pivot='key' type='quantitative' />
@@ -4622,13 +4622,13 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
             <column caption='Sales Forecast' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Calculation_5421109230915137]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='[Sales]*(1-[Parameters].[Parameter 2])*(1+[Parameters].[Parameter 1])' />
             </column>
-            <column caption='SUM([Sales v3])-SUM([Sales Forecast])' datatype='real' name='[Calculation_9330126204734562]' role='measure' type='quantitative' user:unnamed='WhatIfForecast'>
+            <column caption='SUM([Sales])-SUM([Sales Forecast])' datatype='real' name='[Calculation_9330126204734562]' role='measure' type='quantitative' user:unnamed='WhatIfForecast'>
               <calculation class='tableau' formula='SUM([Sales])-SUM([Calculation_5421109230915137])' />
             </column>
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
             <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
             <column aggregate-role-from='[State/Province]' datatype='string' name='[Region]' role='dimension' type='nominal' />
-            <column caption='Sales v3' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column-instance column='[Order Date]' derivation='Month' name='[mn:Order Date:ok]' pivot='key' type='ordinal' />
             <column-instance column='[Order Date]' derivation='None' name='[none:Order Date:qk]' pivot='key' type='quantitative' />
@@ -5153,11 +5153,11 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
       </datasource-dependencies>
       <zones>
         <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='98452' id='34' param='horz' type-v2='layout-flow' w='99180' x='410' y='774'>
-            <zone h='98452' id='32' type-v2='layout-basic' w='99180' x='410' y='774'>
-              <zone h='6594' id='9' type-v2='title' w='99180' x='410' y='774' />
-              <zone h='76946' id='29' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='88394' x='410' y='22280'>
-                <zone h='76991' id='3' name='CustomerScatter' w='44236' x='410' y='22235'>
+          <zone h='97760' id='34' param='horz' type-v2='layout-flow' w='98600' x='700' y='1120'>
+            <zone h='97760' id='32' type-v2='layout-basic' w='98600' x='700' y='1120'>
+              <zone h='6547' id='9' type-v2='title' w='98600' x='700' y='1120' />
+              <zone h='76406' id='29' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='87877' x='700' y='22474'>
+                <zone h='76480' id='3' name='CustomerScatter' w='44000' x='700' y='22400'>
                   <layout-cache minheight='197' minwidth='184' type-h='scalable' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5166,7 +5166,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                     <format attr='margin' value='2' />
                   </zone-style>
                 </zone>
-                <zone h='76991' id='8' name='CustomerRank' w='44178' x='44646' y='22235'>
+                <zone h='76480' id='8' name='CustomerRank' w='43900' x='44700' y='22400'>
                   <layout-cache fixed-size-h='15837' minwidth='260' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5176,7 +5176,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                   </zone-style>
                 </zone>
               </zone>
-              <zone h='14912' id='1' name='CustomerOverview' show-title='false' w='99180' x='410' y='7368'>
+              <zone h='14807' id='1' name='CustomerOverview' show-title='false' w='98600' x='700' y='7667'>
                 <layout-cache fixed-size-h='112' minwidth='660' type-h='fixed' type-w='scalable' />
                 <zone-style>
                   <format attr='border-color' value='#000000' />
@@ -5185,8 +5185,8 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='76946' id='39' param='vert' type-v2='layout-flow' w='10786' x='88804' y='22280'>
-                <zone h='5752' id='35' mode='checkdropdown' name='CustomerScatter' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]' type-v2='filter' w='9850' x='89272' y='23164'>
+              <zone h='76406' id='39' param='vert' type-v2='layout-flow' w='10723' x='88577' y='22474'>
+                <zone h='8960' id='35' mode='checkdropdown' name='CustomerScatter' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]' type-v2='filter' w='9123' x='89377' y='23754'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5195,7 +5195,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                     <format attr='background-color' value='#f5f5f5' />
                   </zone-style>
                 </zone>
-                <zone h='11947' id='36' name='CustomerScatter' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Category:nk]' type-v2='filter' w='9850' x='89272' y='28916'>
+                <zone h='18080' id='36' name='CustomerScatter' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Category:nk]' type-v2='filter' w='9123' x='89377' y='32714'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5204,7 +5204,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                     <format attr='background-color' value='#f5f5f5' />
                   </zone-style>
                 </zone>
-                <zone h='11947' id='37' name='CustomerScatter' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Segment:nk]' type-v2='filter' w='9850' x='89272' y='40863'>
+                <zone h='18080' id='37' name='CustomerScatter' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Segment:nk]' type-v2='filter' w='9123' x='89377' y='50794'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5213,7 +5213,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                     <format attr='background-color' value='#f5f5f5' />
                   </zone-style>
                 </zone>
-                <zone h='7190' id='38' name='CustomerScatter' pane-specification-id='0' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[usr:Calculation_9921103144103743:qk]' type-v2='color' w='9850' x='89272' y='52810'>
+                <zone h='10880' id='38' name='CustomerScatter' pane-specification-id='0' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[usr:Calculation_9921103144103743:qk]' type-v2='color' w='9123' x='89377' y='68874'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5470,7 +5470,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
       <zones>
         <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
           <zone h='100000' id='18' param='vert' type-v2='layout-flow' w='100000' x='0' y='0'>
-            <zone h='3982' id='17' type-v2='title' w='99180' x='410' y='774'>
+            <zone h='5760' id='17' type-v2='title' w='98268' x='866' y='1120'>
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -5478,10 +5478,10 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                 <format attr='margin-bottom' value='2' />
               </zone-style>
             </zone>
-            <zone h='94470' id='7' param='horz' type-v2='layout-flow' w='99180' x='410' y='4756'>
-              <zone h='94470' id='5' param='vert' type-v2='layout-flow' w='99180' x='410' y='4756'>
-                <zone fixed-size='62' h='6858' id='10' is-fixed='true' param='horz' type-v2='layout-flow' w='99180' x='410' y='4756'>
-                  <zone h='6858' id='19' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Order Date:qk]' type-v2='filter' values='context' w='52370' x='410' y='4756'>
+            <zone h='92000' id='7' param='horz' type-v2='layout-flow' w='98268' x='866' y='6880'>
+              <zone h='92000' id='5' param='vert' type-v2='layout-flow' w='98268' x='866' y='6880'>
+                <zone fixed-size='62' h='9920' id='10' is-fixed='true' param='horz' type-v2='layout-flow' w='98268' x='866' y='6880'>
+                  <zone h='9920' id='19' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Order Date:qk]' type-v2='filter' values='context' w='16378' x='866' y='6880'>
                     <zone-style>
                       <format attr='border-color' value='#000000' />
                       <format attr='border-style' value='none' />
@@ -5489,7 +5489,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                       <format attr='background-color' value='#ffffff' />
                     </zone-style>
                   </zone>
-                  <zone h='6858' id='14' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Region:nk]' type-v2='filter' w='9362' x='52780' y='4756'>
+                  <zone h='9920' id='14' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Region:nk]' type-v2='filter' w='16378' x='17244' y='6880'>
                     <zone-style>
                       <format attr='border-color' value='#000000' />
                       <format attr='border-style' value='none' />
@@ -5497,7 +5497,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                       <format attr='background-color' value='#ffffff' />
                     </zone-style>
                   </zone>
-                  <zone h='6858' id='15' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:State/Province:nk]' type-v2='filter' values='relevant' w='9362' x='62142' y='4756'>
+                  <zone h='9920' id='15' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:State/Province:nk]' type-v2='filter' values='relevant' w='16378' x='33622' y='6880'>
                     <zone-style>
                       <format attr='border-color' value='#000000' />
                       <format attr='border-style' value='none' />
@@ -5505,7 +5505,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                       <format attr='background-color' value='#ffffff' />
                     </zone-style>
                   </zone>
-                  <zone h='6858' id='16' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:City:nk]' type-v2='filter' values='relevant' w='9362' x='71504' y='4756'>
+                  <zone h='9920' id='16' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:City:nk]' type-v2='filter' values='relevant' w='16378' x='50000' y='6880'>
                     <zone-style>
                       <format attr='border-color' value='#000000' />
                       <format attr='border-style' value='none' />
@@ -5513,7 +5513,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                       <format attr='background-color' value='#ffffff' />
                     </zone-style>
                   </zone>
-                  <zone h='6858' id='8' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Category:nk]' type-v2='filter' values='relevant' w='9362' x='80866' y='4756'>
+                  <zone h='9920' id='8' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Category:nk]' type-v2='filter' values='relevant' w='16378' x='66378' y='6880'>
                     <zone-style>
                       <format attr='border-color' value='#000000' />
                       <format attr='border-style' value='none' />
@@ -5521,7 +5521,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                       <format attr='background-color' value='#ffffff' />
                     </zone-style>
                   </zone>
-                  <zone h='6858' id='9' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Segment:nk]' type-v2='filter' values='relevant' w='9362' x='90228' y='4756'>
+                  <zone h='9920' id='9' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Segment:nk]' type-v2='filter' values='relevant' w='16378' x='82756' y='6880'>
                     <zone-style>
                       <format attr='border-color' value='#000000' />
                       <format attr='border-style' value='none' />
@@ -5530,8 +5530,8 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                     </zone-style>
                   </zone>
                 </zone>
-                <zone h='87612' id='3' type-v2='layout-basic' w='99180' x='410' y='11614'>
-                  <zone h='87612' id='1' name='Product Detail Sheet' w='99180' x='410' y='11614' />
+                <zone h='82080' id='3' type-v2='layout-basic' w='98268' x='866' y='16800'>
+                  <zone h='82080' id='1' name='Product Detail Sheet' w='98268' x='866' y='16800' />
                 </zone>
               </zone>
             </zone>
@@ -5560,9 +5560,9 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
           </layout-options>
           <size maxheight='750' minheight='750' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='63' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97334' id='62' param='vert' type-v2='layout-flow' w='98000' x='1000' y='1333'>
-                <zone h='3982' id='17' type-v2='title' w='99180' x='410' y='774'>
+            <zone h='100000' id='61' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97440' id='60' param='vert' type-v2='layout-flow' w='98020' x='990' y='1280'>
+                <zone h='5760' id='17' type-v2='title' w='98268' x='866' y='1120'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5571,17 +5571,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='6858' id='19' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Order Date:qk]' type-v2='filter' values='context' w='52370' x='410' y='4756'>
-                  <zone-style>
-                    <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
-                    <format attr='margin' value='4' />
-                    <format attr='padding' value='0' />
-                    <format attr='background-color' value='#ffffff' />
-                  </zone-style>
-                </zone>
-                <zone h='6858' id='14' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Region:nk]' type-v2='filter' w='9362' x='52780' y='4756'>
+                <zone h='9920' id='19' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Order Date:qk]' type-v2='filter' values='context' w='16378' x='866' y='6880'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5591,7 +5581,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                     <format attr='background-color' value='#ffffff' />
                   </zone-style>
                 </zone>
-                <zone h='6858' id='15' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:State/Province:nk]' type-v2='filter' values='relevant' w='9362' x='62142' y='4756'>
+                <zone h='9920' id='14' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Region:nk]' type-v2='filter' w='16378' x='17244' y='6880'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5601,7 +5591,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                     <format attr='background-color' value='#ffffff' />
                   </zone-style>
                 </zone>
-                <zone h='6858' id='16' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:City:nk]' type-v2='filter' values='relevant' w='9362' x='71504' y='4756'>
+                <zone h='9920' id='15' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:State/Province:nk]' type-v2='filter' values='relevant' w='16378' x='33622' y='6880'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5611,7 +5601,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                     <format attr='background-color' value='#ffffff' />
                   </zone-style>
                 </zone>
-                <zone h='6858' id='8' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Category:nk]' type-v2='filter' values='relevant' w='9362' x='80866' y='4756'>
+                <zone h='9920' id='16' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:City:nk]' type-v2='filter' values='relevant' w='16378' x='50000' y='6880'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5621,7 +5611,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                     <format attr='background-color' value='#ffffff' />
                   </zone-style>
                 </zone>
-                <zone h='6858' id='9' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Segment:nk]' type-v2='filter' values='relevant' w='9362' x='90228' y='4756'>
+                <zone h='9920' id='8' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Category:nk]' type-v2='filter' values='relevant' w='16378' x='66378' y='6880'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5631,7 +5621,17 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                     <format attr='background-color' value='#ffffff' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='87612' id='1' is-fixed='true' name='Product Detail Sheet' w='99180' x='410' y='11614'>
+                <zone h='9920' id='9' mode='checkdropdown' name='Product Detail Sheet' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Segment:nk]' type-v2='filter' values='relevant' w='16378' x='82756' y='6880'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='82080' id='1' is-fixed='true' name='Product Detail Sheet' w='98268' x='866' y='16800'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5920,11 +5920,11 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
       </datasource-dependencies>
       <zones>
         <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='98452' id='31' param='horz' type-v2='layout-flow' w='99180' x='410' y='774'>
-            <zone h='98452' id='29' type-v2='layout-basic' w='99180' x='410' y='774'>
-              <zone h='49204' id='16' param='horz' type-v2='layout-flow' w='99180' x='410' y='774'>
-                <zone h='49204' id='10' param='vert' type-v2='layout-flow' w='99180' x='410' y='774'>
-                  <zone h='4203' id='9' type-v2='title' w='99180' x='410' y='774'>
+          <zone h='97760' id='31' param='horz' type-v2='layout-flow' w='98600' x='700' y='1120'>
+            <zone h='97760' id='29' type-v2='layout-basic' w='98600' x='700' y='1120'>
+              <zone h='48858' id='16' param='horz' type-v2='layout-flow' w='98600' x='700' y='1120'>
+                <zone h='48858' id='10' param='vert' type-v2='layout-flow' w='98600' x='700' y='1120'>
+                  <zone h='6080' id='9' type-v2='title' w='98600' x='700' y='1120'>
                     <zone-style>
                       <format attr='border-color' value='#000000' />
                       <format attr='border-style' value='none' />
@@ -5932,9 +5932,9 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                       <format attr='margin' value='2' />
                     </zone-style>
                   </zone>
-                  <zone h='45001' id='5' param='horz' type-v2='layout-flow' w='99180' x='410' y='4977'>
-                    <zone h='45001' id='3' type-v2='layout-basic' w='99180' x='410' y='4977'>
-                      <zone h='45001' id='1' name='ProductView' w='87987' x='410' y='4977'>
+                  <zone h='42778' id='5' param='horz' type-v2='layout-flow' w='98600' x='700' y='7200'>
+                    <zone h='42778' id='3' type-v2='layout-basic' w='98600' x='700' y='7200'>
+                      <zone h='42778' id='1' name='ProductView' w='87472' x='700' y='7200'>
                         <zone-style>
                           <format attr='border-color' value='#000000' />
                           <format attr='border-style' value='none' />
@@ -5942,8 +5942,8 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                           <format attr='margin-right' value='3' />
                         </zone-style>
                       </zone>
-                      <zone h='45001' id='28' param='vert' type-v2='layout-flow' w='11193' x='88397' y='4977'>
-                        <zone h='14049' id='32' mode='radiolist' name='ProductView' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Region:nk]' type-v2='filter' w='10257' x='88865' y='5861'>
+                      <zone h='42778' id='28' param='vert' type-v2='layout-flow' w='11128' x='88172' y='7200'>
+                        <zone h='18458' id='32' mode='radiolist' name='ProductView' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[none:Region:nk]' type-v2='filter' w='9528' x='88972' y='8480'>
                           <zone-style>
                             <format attr='border-color' value='#000000' />
                             <format attr='border-style' value='none' />
@@ -5952,7 +5952,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                             <format attr='background-color' value='#f5f5f5' />
                           </zone-style>
                         </zone>
-                        <zone h='7190' id='33' name='ProductView' pane-specification-id='0' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[sum:Sales:qk]' type-v2='color' w='10257' x='88865' y='19910'>
+                        <zone h='10880' id='33' name='ProductView' pane-specification-id='0' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[sum:Sales:qk]' type-v2='color' w='9528' x='88972' y='26938'>
                           <zone-style>
                             <format attr='border-color' value='#000000' />
                             <format attr='border-style' value='none' />
@@ -5960,7 +5960,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                             <format attr='margin' value='4' />
                           </zone-style>
                         </zone>
-                        <zone h='7190' id='34' name='ProductDetails' pane-specification-id='0' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[usr:Calculation_9921103144103743:qk]' type-v2='color' w='10257' x='88865' y='27100'>
+                        <zone h='10880' id='34' name='ProductDetails' pane-specification-id='0' param='[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[usr:Calculation_9921103144103743:qk]' type-v2='color' w='9528' x='88972' y='37818'>
                           <zone-style>
                             <format attr='border-color' value='#000000' />
                             <format attr='border-style' value='none' />
@@ -5981,7 +5981,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
                   </zone>
                 </zone>
               </zone>
-              <zone h='49248' id='8' name='ProductDetails' w='99180' x='410' y='49978' />
+              <zone h='48902' id='8' name='ProductDetails' w='98600' x='700' y='49978' />
             </zone>
           </zone>
           <zone-style>
@@ -6287,19 +6287,26 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
         <viewpoint name='Total Sales'>
           <zoom type='entire-view' />
           <selection-collection>
-            <node-selection select-tuples='false'>
-              <oriented-node-reference orientation='horizontal'>
-                <node-reference>
-                  <fields>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[:Measure Names]</field>
+                    </x-fields>
+                    <y-fields />
+                  </pane-descriptor>
+                  <columns>
                     <field>[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[:Measure Names]</field>
-                  </fields>
-                  <multibucket>
-                    <bucket>&quot;[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[sum:Calculation_0014193586847744:qk]&quot;</bucket>
-                  </multibucket>
-                </node-reference>
-                <page-reference />
-              </oriented-node-reference>
-            </node-selection>
+                    <field>[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[Multiple Values]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>&quot;[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[sum:Calculation_0014193586847744:qk]&quot;</value>
+                  <value>2324950.3642999618</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
           </selection-collection>
         </viewpoint>
       </viewpoints>
@@ -6309,7 +6316,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
       </device-preview>
       <simple-id uuid='{3D156B5C-8BC3-47BC-B79E-A1BE50D692DC}' />
     </window>
-    <window class='worksheet' maximized='true' name='Total Sales'>
+    <window class='worksheet' name='Total Sales'>
       <cards>
         <edge name='left'>
           <strip size='275'>
@@ -6525,7 +6532,7 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
       </viewpoint>
       <simple-id uuid='{8731FFEC-7F43-464B-95F4-B0FAC1261D13}' />
     </window>
-    <window class='worksheet' name='What If Forecast'>
+    <window class='worksheet' maximized='true' name='What If Forecast'>
       <cards>
         <edge name='left'>
           <strip size='240'>
