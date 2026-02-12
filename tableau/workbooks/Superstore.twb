@@ -21,7 +21,7 @@
     <WorksheetBackgroundTransparency />
     <ZoneFriendlyName />
   </document-format-change-manifest>
-  <repository-location derived-from='http://localhost:9100/t/nate-ba49a57805/workbooks/Superstore_17705599894140?rev=1.1' id='Superstore_17705599894140' path='/t/nate-ba49a57805/workbooks' revision='1.5' site='nate-ba49a57805' />
+  <repository-location derived-from='http://localhost:9100/t/nate-ba49a57805/workbooks/Superstore_17705599894140?rev=1.5' id='Superstore_17705599894140' path='/t/nate-ba49a57805/workbooks' revision='1.6' site='nate-ba49a57805' />
   <preferences>
     <preference name='datagrid.autoupdate.max.filesize' value='100000000000' />
     <preference name='ui.discoverpane.stagingWebContentSwitch' value='1' />
@@ -5560,8 +5560,8 @@ Year: <[federated.10nnk8d1vgmw8q17yu76u06pnbcj].[yr:Order Date:ok]>, Month: <[fe
           </layout-options>
           <size maxheight='750' minheight='750' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='61' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97440' id='60' param='vert' type-v2='layout-flow' w='98020' x='990' y='1280'>
+            <zone h='100000' id='63' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='62' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone h='5760' id='17' type-v2='title' w='98268' x='866' y='1120'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
